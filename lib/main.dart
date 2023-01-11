@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:widetns_app/screens/screen_1_index.dart';
+import 'package:widetns_app/screens/screen_2_myPage.dart';
+import 'package:widetns_app/screens/screen_3_messageBox.dart';
+import 'package:widetns_app/screens/screen_4_receiptManagement.dart';
 
 import 'screens/screen_0_login.dart';
 import 'models/model_query.dart';
@@ -22,10 +25,14 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'flutter_widetns_app',
-        initialRoute: '/',
+        initialRoute: '/login',
         routes: {
-          '/': (context) => LoginPage(),
+          '/login': (context) => Screens0Login(),
           '/mainMenu': (context) => Screens1Index(),
+          '/myPage': (context) => Screens2MyPage(),
+          '/messageBox': (context) => Screens3MessageBox(),
+          '/receiptManagement': (context) => Screens4ReceiptManagement(),
+
         },
       ),
     );

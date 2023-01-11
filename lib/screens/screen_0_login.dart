@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 
 import '../models/model_query.dart';
 
-class LoginPage extends StatelessWidget {
+class Screens0Login extends StatelessWidget {
   final TextEditingController controllerUserId = TextEditingController();
   final TextEditingController controllerUserPw = TextEditingController();
   Map resultDataMap = {};
 
-  LoginPage({super.key});
+  Screens0Login({super.key});
 
   @override
   Widget build(BuildContext context) {

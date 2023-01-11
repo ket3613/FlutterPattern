@@ -1,20 +1,18 @@
-import 'package:flutter/material.dart';
-import 'package:widetns_app/app_confige.dart';
 
-class Screens1Index extends StatelessWidget {
-  const Screens1Index({super.key});
+import 'package:flutter/material.dart';
+
+class Screens2MyPage extends StatelessWidget {
+  const Screens2MyPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
       ),
       body: Center(
-        child: ElevatedButton(
-          child: Text('index'),
-          onPressed: () {
-            // Named route를 사용하여 두 번째 화면으로 전환합니다.
-          },
+        child: Container(
+          child: Text("Mypage"),
         ),
       ),
       drawer:   Drawer(
@@ -63,4 +61,5 @@ class Screens1Index extends StatelessWidget {
       ),
     );
   }
+
 }
