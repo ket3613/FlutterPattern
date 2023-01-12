@@ -57,7 +57,7 @@ class Screens0Login extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () async {
                       UserSessionInfo().reset();
-                      test(context);
+                      attemptLogin(context);
                     },
                     child:
                       Text('로그인 버튼'),
@@ -71,14 +71,12 @@ class Screens0Login extends StatelessWidget {
     );
   }
 
-  test(BuildContext context) async {
+  attemptLogin(BuildContext context) async {
     try {
       var response = await Dio().get('http://127.0.0.1:9082/cmn/login_chk.ajax',
           queryParameters: {'user_id': controllerUserId.text.toString(), 'user_pw': controllerUserPw.text.toString()});
       resultDataMap = {};
       resultDataMap.addAll(response.data);
-      print(response.data);
-      print(resultDataMap['user_id']);
       if(resultDataMap['user_id'] != null && resultDataMap['user_pw'] != null){
         UserSessionInfo().user_id = resultDataMap['user_id'];
         UserSessionInfo().user_nm = resultDataMap['user_nm'];
@@ -97,7 +95,6 @@ class Screens0Login extends StatelessWidget {
       print(e);
     }
   }
-
 }
 
 

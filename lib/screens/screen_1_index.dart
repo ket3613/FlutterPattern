@@ -19,7 +19,6 @@ class Screens1Index extends StatelessWidget {
       ),
       drawer:   Drawer(
         child: ListView(
-          // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
